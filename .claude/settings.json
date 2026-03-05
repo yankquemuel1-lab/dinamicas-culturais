@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import pypdf; print\\(''pypdf ok''\\)\")",
+      "Bash(python3 -c \"import PyPDF2; print\\(''PyPDF2 ok''\\)\")",
+      "Bash(python3 -c \"import pdfminer; print\\(''pdfminer ok''\\)\")",
+      "Bash(pip install pypdf)",
+      "Bash(python3.11 -c \":*)",
+      "Bash(python3 -c \"import sys; print\\(sys.executable\\)\")",
+      "Read(//c/Users/yankq/AppData/Local/Programs/Python//**)",
+      "Bash(/c/Users/yankq/AppData/Local/Programs/Python/Python311/python.exe -c \":*)",
+      "Bash(/c/Users/yankq/AppData/Local/Programs/Python/Python311/python.exe -m pip install pymupdf)",
+      "Bash(gh api repos/yankquemuel1-lab/dinamicas-culturais/pages --method POST -f source[branch]=master -f source[path]=/)",
+      "Bash(where gh)",
+      "Bash(winget list --name \"GitHub CLI\")",
+      "Bash(git config --global credential.helper)",
+      "Bash(git config --list)",
+      "Bash(cp index_es.html \"../lp-es/index.html\")",
+      "Bash(cp style.css \"../lp-es/style.css\")",
+      "Bash(cp \"01 - Capa Principal VA4 \\(1\\).png\" \"../lp-es/01 - Capa Principal VA4 \\(1\\).png\")",
+      "Bash(cp \"mockup ebook.png\" \"../lp-es/mockup ebook.png\")",
+      "Bash(cp educator_circle.png \"../lp-es/\")",
+      "Bash(cp head1.png \"../lp-es/\")",
+      "Bash(cp avatar_claudia.png \"../lp-es/\")",
+      "Bash(cp avatar_rafael.png \"../lp-es/\")",
+      "Bash(cp avatar_juliana.png \"../lp-es/\")"
+    ],
+    "additionalDirectories": [
+      "f:\\claude code\\code design\\lp-es"
+    ]
+  }
+}
