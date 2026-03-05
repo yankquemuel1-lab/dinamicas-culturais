@@ -853,6 +853,37 @@ h1, h2, h3, h4, .display {
   font-weight: 600;
 }
 .price-checklist .ck { color: var(--mint); font-size: 1rem; }
+/* Balão flutuante de gancho */
+.price-balloon {
+  position: relative;
+  display: inline-block;
+  background: var(--amber);
+  color: var(--forest-deep);
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 0.97rem;
+  line-height: 1.4;
+  padding: 0.65rem 1.2rem;
+  border-radius: 18px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 24px rgba(244,185,66,0.40);
+  animation: balloon-float 3s ease-in-out infinite;
+}
+.price-balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 11px solid var(--amber);
+}
+@keyframes balloon-float {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50%       { transform: translateY(-7px) rotate(1deg); }
+}
+
 .price-old {
   color: rgba(255,255,255,0.38);
   text-decoration: line-through;
@@ -1179,7 +1210,7 @@ h1, h2, h3, h4, .display {
   .price-new { font-size: 3rem; }
   .guarantee-seal { width: 96px; height: 96px; bottom: -14px; right: -10px; }
   .guarantee-seal .seal-days { font-size: 1.1rem; }
-  .sticky-cta { display: block; }
+  .sticky-cta { display: none; }
   .countdown-row { gap: 0.4rem; }
   .cd-item { padding: 0.7rem 1rem; min-width: 68px; }
   .cd-num { font-size: 1.75rem; }

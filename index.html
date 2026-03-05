@@ -384,6 +384,11 @@
           <li><span class="ck">✓</span> Pode imprimir e encadernar — tenha offline</li>
           <li><span class="ck">✓</span> Acesso vitalício em PDF — baixe uma vez, use sempre</li>
         </ul>
+        <!-- Balão flutuante -->
+        <div class="price-balloon">
+          Mais barato que um Açaí 😜
+        </div>
+
         <div class="price-old">De R$ 47,00 por apenas</div>
         <div class="price-new"><sup>R$</sup>19,90</div>
         <div class="price-installment">ou <strong>2x de R$10,47</strong></div>
@@ -556,18 +561,12 @@
 
     // ── Countdown timer ──
     (function () {
-      const KEY = 'rv_deadline_v2';
-      const stored = localStorage.getItem(KEY);
-      let deadline = stored
-        ? new Date(parseInt(stored, 10))
-        : new Date(Date.now() + 23 * 3600000 + 47 * 60000);
-      if (!stored) localStorage.setItem(KEY, deadline.getTime());
+      let deadline = new Date(Date.now() + 3 * 3600000 + 33 * 60000);
 
       function tick() {
         let diff = deadline - Date.now();
         if (diff <= 0) {
-          deadline = new Date(Date.now() + 23 * 3600000 + 47 * 60000);
-          localStorage.setItem(KEY, deadline.getTime());
+          deadline = new Date(Date.now() + 3 * 3600000 + 33 * 60000);
           diff = deadline - Date.now();
         }
         const h = Math.floor(diff / 3600000);
