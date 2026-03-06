@@ -226,6 +226,7 @@ h1, h2, h3, h4, .display {
 .nav-logo {
   font-family: var(--f-display);
   font-weight: 800;
+  white-space: nowrap;
   font-size: 1.2rem;
   color: var(--white);
   display: flex;
@@ -1163,6 +1164,18 @@ h1, h2, h3, h4, .display {
 /* ─────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────── */
+.hotmart-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.01em;
+}
+.hotmart-trust strong { color: rgba(255,255,255,0.85); }
+
 @media (max-width: 960px) {
   .hero-grid {
     grid-template-columns: 1fr;
